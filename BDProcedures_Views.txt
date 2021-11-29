@@ -1,0 +1,158 @@
+/*
+	nombre: sp_get_credits
+    tipo: stored procedure
+    parametros:
+		customer_id -> int
+	retorno
+		result	-> int
+        message -> nvarchar(128)
+        id -> int
+        customer_id -> int
+        customer -> nvarchar
+        mail -> nvarchar
+        street 	-> nvarchar
+        house_number -> int
+        telephone	-> int
+        rfc	-> nvarchar
+        curp -> nvarchar
+        job	-> nvarchar
+        company	-> nvarchar
+        salary	-> int
+        credit_name -> nvarchar
+        term	-> nvarchar
+        rate	-> nvarchar
+        fixed_amount	-> int | 'No aplica'
+        amount		-> int | 'No aplica'
+        date_stamp	->	nvarchar
+        state	-> nvarchar
+	Regresa todos los registros de solicitudes de crédito asociados
+    al customer_id.
+    Si hubo un error al realizar la búsqueda result tomará el valor 0, de lo
+    contrario será 1. Si ocurre un error, message contendrá una descripción del mismo.
+*/
+
+/*
+nombre: sp_get_pending_credits
+    tipo: stored procedure
+    parametros:
+		employee_id -> int
+	retorno
+		result	-> int
+        message -> nvarchar(128)
+        id -> int
+        customer_id -> int
+        customer -> nvarchar
+        mail -> nvarchar
+        street 	-> nvarchar
+        house_number -> int
+        telephone	-> int
+        rfc	-> nvarchar
+        curp -> nvarchar
+        job	-> nvarchar
+        company	-> nvarchar
+        salary	-> int
+        credit_name -> nvarchar
+        term	-> nvarchar
+        rate	-> nvarchar
+        fixed_amount	-> int | 'No aplica'
+        amount		-> int | 'No aplica'
+        date_stamp	->	nvarchar
+        state	-> nvarchar
+	Regresa todos los registros de solicitudes de crédito asociados
+    a la función del empleado en función de su id.
+    Si es un gerente quien solicita ver sus solicitudes de crédito pendientes,
+    entonces se regresan todas las solicitudes que hay pendientes para la autorización
+    por parte del gerente. Funciona de manera análoga con los otros dos tipos de empleado
+
+    Si hubo un error al realizar la búsqueda result tomará el valor 0, de lo
+    contrario será 1. Si ocurre un error, message contendrá una descripción del mismo.
+*/
+
+/*
+	nombre: sp_log_in
+    tipo: stored procedure
+    parametros:
+		user_email -> nvarchar(128)
+		user_pswd -> nvarchar(32)
+		
+	retorno
+		result	-> int
+    message -> nvarchar(128)
+    todos los campos de las vistas
+    vw_customers o vw_employees según sea el caso
+    dependiendo del tipo de usuario que se logeo
+
+		Recibe un correo y una contraseña encriptada con MD5 y busca el registro
+		asociado a esos datos haciendo uso de la "salt" .
+*/
+
+/*
+	nombre: sp_request_reconsideration
+    tipo: stored procedure
+    parametros:
+		request_id -> int
+		user_id -> int
+	retorno
+		result	-> int
+        message -> nvarchar(128)
+	Solicita una reconsideración sobre la solicitud asociada al
+    request_id validando que dicha solicitud sea del usuario
+    asociado al user_id así como verificando que no haya más de 2
+    reconsideraciones solicitadas anteriormente y que la solicitud
+    no se encuentre en proceso de reconsideración actualmente.
+
+    result es 1 si todo salió bien 0 si hubo algún error.
+
+*/
+
+/*
+	nombre: sp_request_credit
+    tipo: stored procedure
+    parametros:
+		user_id -> int
+		credit_type -> int
+        amount ->	int(7)
+        ref_1_name -> varchar
+        rf_1_fst_surname varchar
+        rf_1_snd_surname varchar
+        ref_1_phone nvarchar
+        ref_1_time nvarchar
+        rf_1_remark nvarchar
+        ref_2_name -> varchar
+        rf_2_fst_surname varchar
+        rf_2_snd_surname varchar
+        ref_2_phone nvarchar
+        ref_2_time nvarchar
+        rf_2_remark nvarchar
+
+	retorno
+		result	-> int
+        message -> nvarchar(128)
+	Agrega una solicitud de crédito a los registros
+    validando que cumpla con las restricciones establecidas.
+
+    result es 1 si todo salió bien 0 si hubo algún error.
+
+*/
+
+# VIEWS
+
+vw_customers
+Columnas:
+    id, full_name, street, house_number, telephone, mail, RFC, CURP, company, job, salary
+
+vw_employees
+Columnas:
+    id, employee_type, full_name, mail
+
+vw_cat_credits
+Columnas:
+    id, credit_name, term, rate, fixed_amount
+
+vw_credits
+Columnas:
+    id, customer_id, customer, mail, street, house_number, telephone, rfc, curp, job, company, salary, credit_name, term, rate, fixed_amount, amount, date_stamp, state
+
+vw_notifications
+Columnas:
+    id, request, customer, state, date_stamp

@@ -1,0 +1,262 @@
+@media (min-width:1200px){
+
+	body{
+
+		/*background: url(../../../../../../com/creditosBancarios/api/views/assets/img/fondo3.jpg);*/
+		height:100%;
+	}
+
+	.content{
+		/*background: url(../../../../../../com/creditosBancarios/api/views/assets/img/fondo6.jpg);*/
+		height:1000px;
+	}
+
+			.content__header__div-img-logo	{
+				width: 250px;
+				height: 130px;
+	  		background: 	url(../../../../../../com/creditosBancarios/api/views/assets/img/logo.jpg);
+	  		position: relative;
+	    	left: 120px;
+			}
+			.content__header__user{
+				position: relative;
+	    	left: 450px;
+				margin-top: 50px;
+			}
+			.content__center-user__notification{
+				position: relative;
+	    	left: 750px;
+				width: 250px;
+
+
+			}
+					.content__header__user__col__lbl-user{
+						font-size: 20px;
+						margin-right: 20px;
+
+					}
+					.content__header__user__col__btn{
+
+					}
+		.content__center-user{
+			margin-top: 30px;
+			left: 90px;
+		}
+			.content__center-user__list {
+				background: white;
+				margin-top: 30px;
+			}
+			.content__center-user__div-data{
+			position: relative;
+			top: 30px;
+			left: 90px;
+			}
+				.content__center-user__div-data__lbl{
+					font-size: 20px;
+					margin-right: 20px;
+					color: white;
+
+				}
+					.content__center-user__div-data-user__div-key__key{
+
+					}
+				.content__center-user__div-data__cmb-box{
+					margin-top: 20px;
+				}
+				.content__center-user__div-data__btn{
+					margin:20px;
+
+				}
+				.content__center-user__div-data__txta--credit{
+					height:50px;
+					margin-top: 20px;
+				}
+				.content__center-user__div-data__div-checkbox-id{
+					background-color: white;
+					margin-top: 50px;
+				}
+					.content__center-user__div-data__div-checkbox-id__form{
+						position: relative;
+						left: 30px;
+					}
+		.content__center-login	{
+			height: 650px;
+			position: relative;
+			background: #f0ede8;
+			border-radius: 101px 101px 101px 101px;
+
+			margin:30px;
+		}
+			.content__center-login__logo-user{
+				background: url(../../../../../../com/creditosBancarios/api/views/assets/img/user.png);
+				width: 250px;
+				height: 250px;
+				position: relative;
+				left: 400px;
+			}
+			.content__center-login__frame{
+				position: relative;
+				left: 200px;
+				top: 50px;
+			}
+				.content__center-login__frame__line-btn-login{
+					font-size: 20px;
+					 font-family: "Times New Roman";
+					position: relative;
+ 					left: 450px;
+				}
+				.content__center-login__frame__line{
+					font-family: "Times New Roman";
+					font-size: 20px;
+					position: relative;
+
+				}
+				.content__center-login__frame__line__input-password--password{
+					position: relative;
+					left: 38px;
+				}
+
+	.content-2 {
+
+		height:1300px;
+	}
+
+
+
+	p{
+	  font-size: 25px;
+	  font-weight: bold;
+	  color: white;
+	}
+
+
+
+}
+
+@media (max-width:1199px) and (min-width:200px) {
+
+	.content{
+		/*background: url(../../../../../../com/creditosBancarios/api/views/assets/img/fondo6.jpg);*/
+		height:1000px;
+	}
+
+			.content__header__div-img-logo	{
+				width: 250px;
+				height: 130px;
+				background: 	url(../../../../../../com/creditosBancarios/api/views/assets/img/logo.jpg);
+				position: relative;
+				left: 120px;
+			}
+			.content__header__user{
+				position: relative;
+				left: 450px;
+				margin-top: 50px;
+			}
+			.content__center-user__notification{
+				position: relative;
+				left: 620px;
+				width: 250px;
+
+
+			}
+					.content__header__user__col__lbl-user{
+						font-size: 20px;
+						margin-right: 20px;
+
+					}
+					.content__header__user__col__btn{
+
+					}
+		.content__center-user{
+			margin-top: 30px;
+			left: 90px;
+		}
+			.content__center-user__list {
+				background: white;
+				margin-top: 30px;
+			}
+			.content__center-user__div-data{
+			position: relative;
+			top: 30px;
+			left: 90px;
+			}
+				.content__center-user__div-data__lbl{
+					font-size: 20px;
+					margin-right: 20px;
+
+				}
+					.content__center-user__div-data-user__div-key__key{
+
+					}
+				.content__center-user__div-data__cmb-box{
+					margin-top: 20px;
+				}
+				.content__center-user__div-data__btn{
+					margin:20px;
+
+				}
+				.content__center-user__div-data__txta--credit{
+					height:50px;
+					margin-top: 20px;
+				}
+				.content__center-user__div-data__div-checkbox-id{
+					background-color: white;
+					margin-top: 50px;
+				}
+					.content__center-user__div-data__div-checkbox-id__form{
+						position: relative;
+						left: 30px;
+					}
+		.content__center-login	{
+			height: 650px;
+			position: relative;
+			background: #f0ede8;
+			border-radius: 101px 101px 101px 101px;
+
+			margin:30px;
+		}
+			.content__center-login__logo-user{
+				background: url(../../../../../../com/creditosBancarios/api/views/assets/img/user.png);
+				width: 250px;
+				height: 250px;
+				position: relative;
+				left: 300px;
+			}
+			.content__center-login__frame{
+				position: relative;
+				left: 50px;
+				top: 50px;
+			}
+				.content__center-login__frame__line-btn-login{
+					font-size: 20px;
+					 font-family: "Times New Roman";
+					position: relative;
+					left: 370px;
+				}
+				.content__center-login__frame__line{
+					font-family: "Times New Roman";
+					font-size: 20px;
+					position: relative;
+
+				}
+				.content__center-login__frame__line__input-password--password{
+					position: relative;
+					left: 38px;
+				}
+
+	.content-2 {
+
+		height:1300px;
+	}
+
+
+
+	p{
+		font-size: 25px;
+		font-weight: bold;
+		color: white;
+	}
+
+
+
+}
